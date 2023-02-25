@@ -36,10 +36,10 @@ class BullsEyeUITests: XCTestCase {
     continueAfterFailure = false
     app = XCUIApplication()
 
+    app.activate()
+
     app.launchEnvironment = ["browserstack_flag": "1"]
     app.launchArguments += ["-AppleLocale", "en_GB", "-debugServer"]
-
-    app.activate()
 
     app.launch()
   }
