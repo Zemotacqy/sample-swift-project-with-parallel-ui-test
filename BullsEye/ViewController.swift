@@ -50,6 +50,16 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    NSLog("%@", "CommandLine Arguments: " + CommandLine.arguments.debugDescription); // Contains ["-AppleLocale", "en_GB", "-debugServer"]
+    NSLog("%@", "ProcessInfo Environment: " + ProcessInfo.processInfo.environment.debugDescription); // Contains ["browserstack_flag": "1"]
+
+    if !CommandLine.arguments.contains("-debugServer") || !CommandLine.arguments.contains("-AppleLocale") || !CommandLine.arguments.contains("en_GB") || !(ProcessInfo.processInfo.environment["browserstack_flag"] == "1") {
+
+      NSLog("%@", "Could not Find Custom Command Line Args. Skipping game setup")
+      return
+    } else {
+      NSLog("%@", "Found All Arguments and Env Variables")
+    }
     let defaultGameStyle = defaults.integer(forKey: "gameStyle")
     print(defaultGameStyle)
     if gameStyleRange.contains(defaultGameStyle) {
