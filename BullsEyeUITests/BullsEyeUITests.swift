@@ -36,12 +36,21 @@ class BullsEyeUITests: XCTestCase {
     continueAfterFailure = false
     app = XCUIApplication()
 
-    app.activate()
-
     app.launchEnvironment = ["browserstack_flag": "1"]
     app.launchArguments += ["-AppleLocale", "en_GB", "-debugServer"]
 
-    app.launch()
+    let os_version = UIDevice.current.systemVersion
+    
+    if os_version >= "15.4" {
+      //On iOS 15.4 and 15.4.1, app crashes on calling .terminate() or .launch() if it is not running already, refer MOBFR-15
+      app.activate()
+      app.terminate()
+      app.activate()
+    } else {
+      app.launch()
+      app.terminate()
+      app.launch()
+    }
   }
 
   override func tearDown() {
