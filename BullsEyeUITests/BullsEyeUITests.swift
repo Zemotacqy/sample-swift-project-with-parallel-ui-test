@@ -68,8 +68,22 @@ class BullsEyeUITests: XCTestCase {
     }
   }
   
+  private func insertRandomnessToTests() {
+    var epochTime = INT(Date().timeIntervalSince1970)
+    
+    NSLog("%@", "Epoch Time for the Test: " + epochTime)
+    
+    if epochTime % 2 == 0 {
+      XCTAssertTrue(2 == 4)
+    } else {
+      XCTAssertTrue(2 == 2)
+    }
+  }
+  
   func testGameStyleSwitch001() {
     coreTestLogic()
+    
+    insertRandomnessToTests()
   }
 
   func testGameStyleSwitch002() {
