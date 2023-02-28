@@ -96,6 +96,8 @@ class BullsEyeUITests: XCTestCase {
 
   func testGameStyleSwitch003() {
     coreTestLogic()
+    NSLog("%@", "Failing Assertion Always")
+    XCTAssertTrue(2 == 4)
   }
 
   func testGameStyleSwitch004() {
