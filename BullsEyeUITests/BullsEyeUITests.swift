@@ -69,9 +69,9 @@ class BullsEyeUITests: XCTestCase {
   }
   
   private func insertRandomnessToTests() {
-    var epochTime = INT(Date().timeIntervalSince1970)
+    let epochTime = Int(Date().timeIntervalSince1970)
     
-    NSLog("%@", "Epoch Time for the Test: " + epochTime)
+    NSLog("%@", "Epoch Time for the Test: " + String(epochTime))
     
     if epochTime % 2 == 0 {
       XCTAssertTrue(2 == 4)
