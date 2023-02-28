@@ -32,6 +32,7 @@ class BullsEyeUITests: XCTestCase {
   var app: XCUIApplication!
   
   override func setUpWithError() throws {
+    NSLog("%@: %d", "Triggered Setup Phase at: ", Int(Date().timeIntervalSince1970))
     try super.setUpWithError()
     continueAfterFailure = false
     app = XCUIApplication()
@@ -39,6 +40,7 @@ class BullsEyeUITests: XCTestCase {
   }
 
   override func tearDown() {
+    NSLog("%@: %d", "Triggered teardown Phase at: ", Int(Date().timeIntervalSince1970))
     super.tearDown()
     app.terminate()
   }
