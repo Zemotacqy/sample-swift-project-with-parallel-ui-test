@@ -70,119 +70,76 @@ class BullsEyeUITests: XCTestCase {
   
   func testGameStyleSwitch001() {
     coreTestLogic()
+    
+    NSLog("%@", "Sleeping for 3 seconds!!");
+    sleep(3)
+    
+    let dateTime = generateDateTimeString()
+    
+    NSLog("%@", "Current date time is " + dateTime);
+    
+    XCTAssertFalse(dateTime.contains(":"))
   }
 
   func testGameStyleSwitch002() {
     coreTestLogic()
+    
+    NSLog("%@", "Sleeping for 3 seconds!!");
+    sleep(3)
+    
+    let dateTime = generateDateTimeString()
+    
+    NSLog("%@", "Current date time is " + dateTime);
+    
+    XCTAssertFalse(dateTime.contains(":"))
   }
 
-  func testGameStyleSwitch003() {
-    coreTestLogic()
-  }
+  func testUniversalLink() {
+    NSLog("%@", "Sleeping for 3 seconds!!");
+    sleep(3)
+    let contactsApp = XCUIApplication(bundleIdentifier: "com.apple.mobilephone")
+    app.terminate()
+    contactsApp.activate()
+    
+    sleep(5)
+    
+    let contactsButton = contactsApp.buttons["Contacts"].firstMatch
+    if contactsButton.exists {
+        contactsButton.tap()
+    }
+    contactsApp.buttons["Add"].tap()
 
-  func testGameStyleSwitch004() {
-    coreTestLogic()
-  }
+    let addUrlPredicate = NSPredicate(format: "label CONTAINS[c] %@", "add url")
+    let addURLCell = contactsApp.tables.cells.element(matching: addUrlPredicate)
+    
+//    contactsApp.scrollToElement(element: addURLCell)
+    let startPoint = addURLCell.coordinate(withNormalizedOffset: CGVector(dx: 0, dy: 0))
+    let finishPoint = addURLCell.coordinate(withNormalizedOffset: CGVector(dx: 0, dy: -1))
+    startPoint.press(forDuration: 0, thenDragTo: finishPoint)
+    addURLCell.tap()
 
-  func testGameStyleSwitch005() {
-    coreTestLogic()
-  }
+    let editTableView = contactsApp.tables.firstMatch
+    let urlTextField = editTableView.cells.textFields["URL"]
+    urlTextField.tap()
+    urlTextField.typeText("https://account.eu-dev.sandbox.dw-cloud.net/wallet/account/confirm-signup?status=success&email=test@sun-fish.com")
+    editTableView.swipeDown()
 
-  func testGameStyleSwitch006() {
-    coreTestLogic()
-  }
+    contactsApp.buttons["Done"].tap()
 
-  func testGameStyleSwitch007() {
-    coreTestLogic()
+    let urlPredicate = NSPredicate(format: "label CONTAINS[c] %@", "homepage")
+    let urlCell = contactsApp.tables.cells.element(matching: urlPredicate)
+    urlCell.tap()
   }
+}
 
-  func testGameStyleSwitch008() {
-    coreTestLogic()
-  }
-
-  func testGameStyleSwitch009() {
-    coreTestLogic()
-  }
-
-  func testGameStyleSwitch010() {
-    coreTestLogic()
-  }
-
-  func testGameStyleSwitch011() {
-    coreTestLogic()
-  }
-
-  func testGameStyleSwitch012() {
-    coreTestLogic()
-  }
-
-  func testGameStyleSwitch013() {
-    coreTestLogic()
-  }
-
-  func testGameStyleSwitch014() {
-    coreTestLogic()
-  }
-
-  func testGameStyleSwitch015() {
-    coreTestLogic()
-  }
-
-  func testGameStyleSwitch016() {
-    coreTestLogic()
-  }
-
-  func testGameStyleSwitch017() {
-    coreTestLogic()
-  }
-
-  func testGameStyleSwitch018() {
-    coreTestLogic()
-  }
-
-  func testGameStyleSwitch019() {
-    coreTestLogic()
-  }
-
-  func testGameStyleSwitch020() {
-    coreTestLogic()
-  }
-
-  func testGameStyleSwitch021() {
-    coreTestLogic()
-  }
-
-  func testGameStyleSwitch022() {
-    coreTestLogic()
-  }
-
-  func testGameStyleSwitch023() {
-    coreTestLogic()
-  }
-
-  func testGameStyleSwitch024() {
-    coreTestLogic()
-  }
-
-  func testGameStyleSwitch025() {
-    coreTestLogic()
-  }
-
-  func testGameStyleSwitch026() {
-    coreTestLogic()
-  }
-
-  func testGameStyleSwitch027() {
-    coreTestLogic()
-  }
-
-  func testGameStyleSwitch028() {
-    coreTestLogic()
-  }
-
-  func testGameStyleSwitch029() {
-    coreTestLogic()
-  }
+private func generateDateTimeString() -> String {
+  let currentDateTime = Date()
+  let formatter = DateFormatter()
+  
+  formatter.dateFormat = "yyyyMMddHHmmSShh"
+  let dateTimeString = formatter.string(from: currentDateTime)
+  
+  return dateTimeString
 }
 
 class BullsEyeUITests2: XCTestCase {
