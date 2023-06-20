@@ -9,7 +9,10 @@
     }
   ],
   "defaultOptions" : {
-    "testRepetitionMode" : "retryOnFailure"
+    "defaultTestExecutionTimeAllowance" : 1000,
+    "maximumTestRepetitions" : 4,
+    "testRepetitionMode" : "retryOnFailure",
+    "testTimeoutsEnabled" : true
   },
   "testTargets" : [
     {

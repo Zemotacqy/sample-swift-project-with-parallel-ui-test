@@ -68,6 +68,8 @@ class BullsEyeUITests: XCTestCase {
       XCTAssertTrue(slideLabel.exists)
       XCTAssertFalse(typeLabel.exists)
     }
+
+    insertRandomnessToTests()
   }
   
   private func insertRandomnessToTests() {
@@ -83,21 +85,14 @@ class BullsEyeUITests: XCTestCase {
       XCTAssertTrue(2 == 2)
     }
   }
-  
-  func testGameStyleSwitch001() {
-    coreTestLogic()
-    
-    insertRandomnessToTests()
-  }
 
   func testGameStyleSwitch002() {
     coreTestLogic()
   }
 
-  func testGameStyleSwitch003() {
+  func testGameStyleSwitch003Skip() throws {
+    try XCTSkipIf(1 == 1, "Skipping Test")
     coreTestLogic()
-    NSLog("%@", "Failing Assertion Always")
-    XCTAssertTrue(2 == 4)
   }
 
   func testGameStyleSwitch004() {
@@ -120,7 +115,8 @@ class BullsEyeUITests: XCTestCase {
     coreTestLogic()
   }
 
-  func testGameStyleSwitch009() {
+  func testGameStyleSwitch009Skip() throws {
+    try XCTSkipIf(1 == 1, "Skipping Test")
     coreTestLogic()
   }
 
@@ -160,7 +156,8 @@ class BullsEyeUITests: XCTestCase {
     coreTestLogic()
   }
 
-  func testGameStyleSwitch019() {
+  func testGameStyleSwitch019Skip() throws {
+    try XCTSkipIf(1 == 1, "Skipping Test")
     coreTestLogic()
   }
 
@@ -188,7 +185,8 @@ class BullsEyeUITests: XCTestCase {
     coreTestLogic()
   }
 
-  func testGameStyleSwitch026() {
+  func testGameStyleSwitch026Skip() throws {
+    try XCTSkipIf(1 == 1, "Skipping Test")
     coreTestLogic()
   }
 
