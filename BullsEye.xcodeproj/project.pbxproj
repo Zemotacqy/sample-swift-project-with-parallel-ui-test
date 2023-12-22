@@ -22,6 +22,7 @@
 		D2A5F2091F4A9144005CD714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F2071F4A9144005CD714 /* Main.storyboard */; };
 		D2A5F20B1F4A9144005CD714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F20A1F4A9144005CD714 /* Assets.xcassets */; };
 		D2A5F2211F4A96D0005CD714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */; };
+		FD874D872B35666F0063F498 /* Barebone.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD874D862B35666F0063F498 /* Barebone.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		D2A5F20A1F4A9144005CD714 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2A5F20F1F4A9144005CD714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FD874D862B35666F0063F498 /* Barebone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barebone.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 			children = (
 				13FB7D0E26773C570084066F /* BullsEyeUITests.swift */,
 				134BFA532A40739A003D5231 /* CustomTestObserver.swift */,
+				FD874D862B35666F0063F498 /* Barebone.swift */,
 			);
 			path = BullsEyeUITests;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 					};
 					13FB7D0B26773C570084066F = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1500;
 						TestTargetID = D2A5F1FF1F4A9144005CD714;
 					};
 					D2A5F1FF1F4A9144005CD714 = {
@@ -461,6 +465,7 @@
 			files = (
 				134BFA542A40739A003D5231 /* CustomTestObserver.swift in Sources */,
 				13FB7D0F26773C570084066F /* BullsEyeUITests.swift in Sources */,
+				FD874D872B35666F0063F498 /* Barebone.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,6 +688,7 @@
 		13FB7D1326773C570084066F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -701,6 +707,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.bitrrise.BullsEyeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BullsEye;
@@ -710,6 +717,7 @@
 		13FB7D1426773C570084066F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

@@ -28,32 +28,6 @@
 
 import XCTest
 
-class BullsEyeUnitTests: XCTestCase {
-  override func setUpWithError() throws {
-    try super.setUpWithError()
-  }
-  
-  override func tearDownWithError() throws {
-    try super.tearDownWithError()
-  }
-  
-  private func testCasePass() {
-    XCTAssertTrue(2 == 2)
-  }
-  
-  private func testCaseFail() {
-    XCTAssertTrue(2 == 3)
-  }
-  
-  private func testCasePassDuplicate() {
-    XCTAssertTrue(2 == 2)
-  }
-  
-  private func testCaseFailDuplicate() {
-    XCTAssertTrue(2 == 3)
-  }
-}
-
 class BullsEyeUITests: XCTestCase {
   var app: XCUIApplication!
   
