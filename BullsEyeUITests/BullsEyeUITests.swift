@@ -51,6 +51,8 @@ class BullsEyeUITests: XCTestCase {
     let typeButton = app.segmentedControls.buttons["Type"]
     let slideLabel = app.staticTexts["Get as close as you can to: "]
     let typeLabel = app.staticTexts["Guess where the slider is: "]
+    let inputText = app.textFields["1-100"]
+    let hitButton = app.buttons["hit me!"]
 
     // then
     if slideButton.isSelected {
@@ -60,14 +62,17 @@ class BullsEyeUITests: XCTestCase {
       typeButton.tap()
       XCTAssertTrue(typeLabel.exists)
       XCTAssertFalse(slideLabel.exists)
-    } else if typeButton.isSelected {
-      XCTAssertTrue(typeLabel.exists)
-      XCTAssertFalse(slideLabel.exists)
-
-      slideButton.tap()
-      XCTAssertTrue(slideLabel.exists)
-      XCTAssertFalse(typeLabel.exists)
     }
+    
+    inputText.tap()
+    inputText.typeText("81")
+    hitButton.tap()
+    
+    sleep(10)
+    
+    let okButton = app.buttons["OK"]
+    hitButton.tap()
+    sleep(10)
 
     insertRandomnessToTests()
   }
@@ -203,7 +208,7 @@ class BullsEyeUITests: XCTestCase {
   }
 }
 
-class BullsEyeUITests2: XCTestCase {
+class BullsEyeUITestsSimilar: XCTestCase {
   var app: XCUIApplication!
   
   override func setUpWithError() throws {
