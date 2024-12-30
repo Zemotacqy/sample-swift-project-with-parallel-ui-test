@@ -65,14 +65,15 @@ class BullsEyeUITests: XCTestCase {
     }
     
     inputText.tap()
-    inputText.typeText("81")
+    let randomNumber = Int.random(in: 1...100)
+    let randomString = String(randomNumber)
+    inputText.typeText(randomString)
     hitButton.tap()
     
-    sleep(10)
+    sleep(3)
     
     let okButton = app.buttons["OK"]
-    hitButton.tap()
-    sleep(10)
+    okButton.tap()
 
     insertRandomnessToTests()
   }
@@ -206,6 +207,130 @@ class BullsEyeUITests: XCTestCase {
   func testGameStyleSwitch029() {
     coreTestLogic()
   }
+  
+  func testGameStyleSwitch030() {
+    coreTestLogic()
+  }
+
+  func testGameStyleSwitch031() {
+    coreTestLogic()
+  }
+
+  func testGameStyleSwitch032() {
+    coreTestLogic()
+  }
+  
+  func testGameStyleSwitch033() {
+    coreTestLogic()
+  }
+
+  func testGameStyleSwitch034() {
+    coreTestLogic()
+  }
+
+  func testGameStyleSwitch035() {
+    coreTestLogic()
+  }
+  
+  func testGameStyleSwitch036() {
+    coreTestLogic()
+  }
+
+  func testGameStyleSwitch037() {
+    coreTestLogic()
+  }
+
+  func testGameStyleSwitch038() {
+    coreTestLogic()
+  }
+  
+  func testGameStyleSwitch039() {
+    coreTestLogic()
+  }
+
+  func testGameStyleSwitch040() {
+    coreTestLogic()
+  }
+
+  func testGameStyleSwitch041() {
+    coreTestLogic()
+  }
+
+  func testGameStyleSwitch042() {
+    coreTestLogic()
+  }
+  
+  func testGameStyleSwitch043() {
+    coreTestLogic()
+  }
+
+  func testGameStyleSwitch044() {
+    coreTestLogic()
+  }
+
+  func testGameStyleSwitch045() {
+    coreTestLogic()
+  }
+  
+  func testGameStyleSwitch046() {
+    coreTestLogic()
+  }
+
+  func testGameStyleSwitch047() {
+    coreTestLogic()
+  }
+
+  func testGameStyleSwitch048() {
+    coreTestLogic()
+  }
+  
+  func testGameStyleSwitch049() {
+    coreTestLogic()
+  }
+
+  func testGameStyleSwitch050() {
+    coreTestLogic()
+  }
+  
+  func testGameStyleSwitch051() {
+    coreTestLogic()
+  }
+
+  func testGameStyleSwitch052() {
+    coreTestLogic()
+  }
+  
+  func testGameStyleSwitch053() {
+    coreTestLogic()
+  }
+
+  func testGameStyleSwitch054() {
+    coreTestLogic()
+  }
+
+  func testGameStyleSwitch055() {
+    coreTestLogic()
+  }
+  
+  func testGameStyleSwitch056() {
+    coreTestLogic()
+  }
+
+  func testGameStyleSwitch057() {
+    coreTestLogic()
+  }
+
+  func testGameStyleSwitch058() {
+    coreTestLogic()
+  }
+  
+  func testGameStyleSwitch059() {
+    coreTestLogic()
+  }
+
+  func testGameStyleSwitch060() {
+    coreTestLogic()
+  }
 }
 
 class BullsEyeUITestsSimilar: XCTestCase {
@@ -218,7 +343,7 @@ class BullsEyeUITestsSimilar: XCTestCase {
     app.launch()
   }
   
-  func testGameStyleSwitch() {
+  func coreTestLogic() {
     // given
     let slideButton = app.segmentedControls.buttons["Slide"]
     let typeButton = app.segmentedControls.buttons["Type"]
@@ -241,5 +366,25 @@ class BullsEyeUITestsSimilar: XCTestCase {
       XCTAssertTrue(slideLabel.exists)
       XCTAssertFalse(typeLabel.exists)
     }
+  }
+  
+  func testGameStyleSwitch() {
+    coreTestLogic()
+  }
+  
+  func testGameStyleSwitch1() {
+    coreTestLogic()
+  }
+  
+  func testGameStyleSwitch2() {
+    coreTestLogic()
+  }
+  
+  func testGameStyleSwitch3() {
+    coreTestLogic()
+  }
+  
+  func testGameStyleSwitch4() {
+    coreTestLogic()
   }
 }
