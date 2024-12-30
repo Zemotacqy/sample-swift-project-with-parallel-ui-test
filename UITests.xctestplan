@@ -1,27 +1,9 @@
 {
   "configurations" : [
-    {
-      "id" : "EFA88F06-D77F-4167-9BB2-49CC896D9F0F",
-      "name" : "EnglistConfig",
-      "options" : {
-        "language" : "en-GB",
-        "region" : "GB",
-        "testRepetitionMode" : "retryOnFailure"
-      }
-    },
-    {
-      "id" : "13F80A04-E43C-4B8F-8141-03BF5A4DBBA7",
-      "name" : "GermanConfig",
-      "options" : {
-        "language" : "de",
-        "region" : "DE",
-        "testRepetitionMode" : "retryOnFailure"
-      }
-    }
+
   ],
   "defaultOptions" : {
-    "maximumTestRepetitions" : 4,
-    "testRepetitionMode" : "retryOnFailure"
+    "maximumTestRepetitions" : null
   },
   "testTargets" : [
     {
