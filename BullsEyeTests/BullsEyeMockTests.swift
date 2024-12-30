@@ -28,7 +28,7 @@
 
 import XCTest
 
-@testable import BullsEye
+@testable import StandardBullsEye
 
 class MockUserDefaults: UserDefaults {
   var gameStyleChanged = 0

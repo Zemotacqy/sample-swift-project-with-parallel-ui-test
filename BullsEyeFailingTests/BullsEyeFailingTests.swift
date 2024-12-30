@@ -27,7 +27,7 @@
 /// THE SOFTWARE.
 
 import XCTest
-@testable import BullsEye
+@testable import StandardBullsEye
 
 class BullsEyeFailingTests: XCTestCase {
   
