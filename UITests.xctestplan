@@ -1,6 +1,12 @@
 {
   "configurations" : [
+    {
+      "id" : "63AC4DCA-23F7-4E9C-96FB-7DA86C5B04F4",
+      "name" : "Configuration 1",
+      "options" : {
 
+      }
+    }
   ],
   "defaultOptions" : {
     "maximumTestRepetitions" : null

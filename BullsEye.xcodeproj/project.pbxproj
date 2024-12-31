@@ -23,6 +23,7 @@
 		D2A5F20B1F4A9144005CD714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F20A1F4A9144005CD714 /* Assets.xcassets */; };
 		D2A5F2211F4A96D0005CD714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */; };
 		FD874D872B35666F0063F498 /* Barebone.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD874D862B35666F0063F498 /* Barebone.swift */; };
+		FDDBCDFC2D23C3760060C73A /* StandardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDBCDFB2D23C35C0060C73A /* StandardUITests.swift */; };
 		FDED35122CD216030002E0CB /* BullsEyeSampleUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDED35112CD216030002E0CB /* BullsEyeSampleUnitTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +97,7 @@
 		D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD7A7BFD2B4E7252002C859F /* BullsEyeUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BullsEyeUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		FD874D862B35666F0063F498 /* Barebone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barebone.swift; sourceTree = "<group>"; };
+		FDDBCDFB2D23C35C0060C73A /* StandardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardUITests.swift; sourceTree = "<group>"; };
 		FDED350F2CD216030002E0CB /* BullsEyeSampleUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullsEyeSampleUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDED35112CD216030002E0CB /* BullsEyeSampleUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullsEyeSampleUnitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,6 +177,7 @@
 		13FB7D0D26773C570084066F /* BullsEyeUITests */ = {
 			isa = PBXGroup;
 			children = (
+				FDDBCDFB2D23C35C0060C73A /* StandardUITests.swift */,
 				13FB7D0E26773C570084066F /* BullsEyeUITests.swift */,
 				134BFA532A40739A003D5231 /* CustomTestObserver.swift */,
 				FD874D862B35666F0063F498 /* Barebone.swift */,
@@ -524,6 +527,7 @@
 			files = (
 				134BFA542A40739A003D5231 /* CustomTestObserver.swift in Sources */,
 				13FB7D0F26773C570084066F /* BullsEyeUITests.swift in Sources */,
+				FDDBCDFC2D23C3760060C73A /* StandardUITests.swift in Sources */,
 				FD874D872B35666F0063F498 /* Barebone.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
