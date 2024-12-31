@@ -333,3 +333,5 @@ class StandardUITests: XCTestCase {
     coreTestLogic()
   }
 }
+
+// Execution Count: 1
